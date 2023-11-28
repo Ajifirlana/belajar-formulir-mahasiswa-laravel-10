@@ -1,6 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\LoginController;
+
 use App\Http\Controllers\NamaController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\MahasiswaController;
@@ -17,18 +19,9 @@ use App\Http\Controllers\MenuController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
+Route::controller(LoginController::class)->group(function() {
+    Route::get('/', 'index')->name('index');
+    Route::get('/login', 'login')->name('login');
+    Route::post('/aksi-login', 'aksi_login')->name('aksi_login');
+    Route::get('/dashboard', 'dashboard')->name('dashboard');
 });
-
-Route::get('halo', function () {
-    return "Halo, Nama Saya  Fitrah ";
-});
-
-Route::get('/nama', [NamaController::class, 'profil']);
-
-Route::get('/menu', [MenuController::class, 'menu']);
-
-Route::get('/formulir', [MahasiswaController::class, 'tampilkanFormulir'])->name('formulir');
-Route::post('/simpan_formulir', [MahasiswaController::class, 'simpan_formulir'])->name('simpan_formulir');
-Route::get('/formulir/hasil_formulir', [MahasiswaController::class, 'tampilkanHasilFormulir'])->name('hasil-formulir');

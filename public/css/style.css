@@ -1,46 +1,53 @@
 body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-}
-
-.container {
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
-    text-align: center;
-    padding: 20px;
-}
-
-.profile img {
-    width: 200px;
-    height: 200px;
-    border-radius: 50%;
-    border: 5px solid #fff;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    font-family: sans-serif;
+    background: #d5f0f3;
 }
 
 h1 {
-    font-size: 36px;
-    margin-top: 20px;
-    color: #333;
+    text-align: center;
+    /*ketebalan font*/
+    font-weight: 300;
 }
 
-p {
-    font-size: 18px;
-    color: #555;
+.tulisan_login {
+    text-align: center;
+    /*membuat semua huruf menjadi kapital*/
+    text-transform: uppercase;
 }
 
-.container p:last-child {
-    margin-top: 20px;
+.kotak_login {
+    width: 350px;
+    background: gray;
+    /*meletakkan form ke tengah*/
+    margin: 80px auto;
+    padding: 30px 20px;
 }
 
-.container p:last-child::before {
-    content: "\2022";
-    margin-right: 10px;
+label {
+    font-size: 11pt;
+}
+
+.form_login {
+    /*membuat lebar form penuh*/
+    box-sizing: border-box;
+    width: 100%;
+    padding: 10px;
+    font-size: 11pt;
+    margin-bottom: 20px;
+}
+
+.tombol_login {
+    background: #46de4b;
+    color: white;
+    font-size: 11pt;
+    width: 100%;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.link {
+    color: #232323;
+    text-decoration: none;
+    font-size: 10pt;
 }
