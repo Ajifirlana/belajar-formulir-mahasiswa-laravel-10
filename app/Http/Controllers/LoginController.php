@@ -46,5 +46,13 @@ class LoginController extends Controller
         
             return view('dashboard',array("record"=>$record));
         
-    } 
+    }
+    public function logout(Request $request)
+    {
+        Auth::logout();
+        $request->session()->invalidate();
+        $request->session()->regenerateToken();
+        return redirect()->route('login')
+            ->withSuccess('You have logged out successfully!');;
+    }     
 }

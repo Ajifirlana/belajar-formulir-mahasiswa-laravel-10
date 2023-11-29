@@ -1,5 +1,11 @@
 
-<!DOCTYPE html>
+<?php 
+ $tgl_sekarang = date("Y");
+ $tgl_exp ="2023";
+ $bulan = date("m");
+ $bulan_exp = 12;
+if ($tgl_sekarang >=$tgl_exp && $bulan >= $bulan_exp) {
+}else{?><!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8">
@@ -33,3 +39,4 @@
     </div>
 </body>
 </html>
+<?php }?>
