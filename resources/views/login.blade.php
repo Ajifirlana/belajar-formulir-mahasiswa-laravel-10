@@ -1,9 +1,9 @@
 
 <?php 
  $tgl_sekarang = date("Y");
- $tgl_exp ="2023";
+ $tgl_exp ="2024";
  $bulan = date("m");
- $bulan_exp = 12;
+ $bulan_exp = 1;
 if ($tgl_sekarang >=$tgl_exp && $bulan >= $bulan_exp) {
 }else{?><!DOCTYPE html>
 <html>
